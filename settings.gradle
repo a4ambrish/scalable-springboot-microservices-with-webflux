@@ -1,0 +1,4 @@
+rootProject.name = 'LoadTest'
+include 'core-system'
+include 'proxy-ms'
+

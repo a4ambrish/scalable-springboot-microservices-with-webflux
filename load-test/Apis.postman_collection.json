@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "08f7a6c9-0df2-4ada-a856-5ccefbd525b6",
+		"name": "Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quick API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cards/flex",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cards",
+						"flex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proxy API -> Blocking + SubSystem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cards/blocking/from-core-system",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cards",
+						"blocking",
+						"from-core-system"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reactive Proxy API -> Non Blocking + SubSystem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cards/reactive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cards",
+						"reactive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CoreSystem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/core-system/slowness",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"core-system",
+						"slowness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Core System Slowness",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"slowness\" : 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/core-system/slowness",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"core-system",
+						"slowness"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
